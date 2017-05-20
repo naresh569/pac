@@ -4,15 +4,19 @@
     <title> PAC </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- start - Bootstrap -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/tether/dist/css/tether.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- end -->
+    
     <script src="./index.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--<header>
-        <div class="container">
-        </div>
-    </header>-->
     <nav>
         <div class="container">
             <div id="logo" class="logo">
@@ -23,7 +27,7 @@
             </div>
             <div id="hamburger" class="hamburger">
                 <button id="btn-hamburger">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    <img src="images/menu.png" alt="">
                 </button>
             </div>
             <!--<div class="menu-container">
@@ -41,9 +45,66 @@
             
         </div>
     </nav>
-    
     <main>
         <div class="container">
+            <section>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide001.png" alt="First slide">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide002.png" alt="Second slide">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide003.png" alt="Third slide">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide004.png" alt="Forth slide">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide005.png" alt="Fifth slide">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide006.png" alt="Sixth slide">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <img class="d-block img-fluid" src="images/slider/slide007.png" alt="Seventh slide">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
             <section>
                 <span id="objective"></span>
                 <h1 class="uppercase"> Objective </h1>
