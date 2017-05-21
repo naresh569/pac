@@ -14,7 +14,10 @@ window.addEventListener("load", function () {
     window.addEventListener("scroll", closeMenu);
 
     var main = document.getElementsByTagName("main")[0];
-    main.addEventListener("focus", closeMenu);
+    main.addEventListener("click", function () {
+        console.log(" welcome ");
+        closeMenu();
+    });
 
     $('.carousel').carousel({
         interval: 100

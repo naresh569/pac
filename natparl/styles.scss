@@ -24,6 +24,10 @@ h1 {
     // font-size: 16px;
     padding: 5px;
     border-bottom: 1px solid #ccc;
+    // border: 1px solid $color-secondary;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-primary;
 }
 h3 {
     font-size: 1.2em;
@@ -138,6 +142,39 @@ article ul {
     list-style-type: square;
     text-align: left;
 }
+.guests {
+    border: 1px solid $color-primary;
+    padding: 5px;
+}
+.guests figure {
+    width: 250px;
+    height: auto;
+    padding: 5px;
+    // border: 1px solid $color-primary;
+    margin: 5px auto;
+}
+.guests figure img {
+    width: 100%;
+    border: 1px solid #000;
+}
+.guests figcaption {
+    padding-top: 3px;
+}
+.guests .h4,
+.guests h4 {
+    // border: 1px solid #000;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+}
+.guests .h6,
+.guests h6 {
+    // border: 1px solid #0f0;
+    font-size: 0.8rem;
+    text-align: center;
+    color: $color-primary;
+}
+
 footer {
     border: 1px solid transparent;
     border-top-color: #ccc;
