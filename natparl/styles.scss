@@ -1,5 +1,6 @@
 $color-primary: #666666;
 $color-secondary: #f93;
+$color-green: #138808;
 $size: 13px;
 
 body {
@@ -10,8 +11,9 @@ body {
 }
 /* Common Styles */
 .container {
-    // background-color: #337ab7;
-    position: relative;   
+    // border: 1px solid #337ab7;
+    position: relative;
+
 }
 
 h1 {
@@ -20,14 +22,14 @@ h1 {
     font-size: 1.5em;
     // border: 1px solid #000;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 20px;
     // font-size: 16px;
     padding: 5px;
     border-bottom: 1px solid #ccc;
     // border: 1px solid $color-secondary;
     text-align: center;
     text-transform: uppercase;
-    color: $color-primary;
+    color: $color-secondary;
 }
 h3 {
     font-size: 1.2em;
@@ -127,10 +129,85 @@ section {
     // border: 1px solid #000;
     margin: 5px auto;
 }
-section > span {
+section .container > span {
     position: absolute;
     top: -50px;
 }
+
+/* Section - SLIDER */
+section.slider {
+    // border: 1px solid #000;
+    padding: 10px;
+}
+section.slider .container {
+    background: #fff;
+}
+section.slider .carousel {
+    margin: 0 auto;
+    // margin-bottom: 20px;
+}
+section.slider .carousel img {
+    margin: 0 auto;
+}
+
+section.slider .carousel-control-next-icon, .carousel-control-prev-icon {
+    border: 3px solid black;
+    color: $color-secondary !important;
+    background-color: black;
+}
+section.slider .carousel-indicators {
+    z-index: 1;
+}
+
+/* Section - VISION */
+section.vision {
+    text-align: center;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff,
+        #fff 5px,
+        #ccc 5px,
+        #ccc 10px
+    );
+    // transition: all 1s ease-in-out;
+    
+    // position: relative;
+    // padding-bottom: 30px;
+}
+section.vision .container {
+    padding-top: 30px;
+    background-color: transparent;
+    // transition: background-color 1m ease-in-out;
+    // border: 1px solid #000;
+}
+section.vision .header {
+    text-align: center;
+}
+// section.vision h1,
+// section.vision .h1 {
+//     border: 0;
+//     margin: 0;
+//     font-size: 2rem;
+//     text-transform: none;
+//     color: $color-secondary;
+// }
+section.vision h2,
+section.vision .h2 {
+    font-size: 1.2rem;
+}
+section.vision h3,
+section.vision .h3 {
+    color: $color-primary;
+    text-align: center;
+}
+section.vision .status {
+    border: 0;
+    background: transparent;
+    padding: 7px;
+    color: $color-green;
+    transition: all 1s ease-in-out;
+}
+
 article {
     // border: 1px solid #ccc;
     padding: 10px;
@@ -143,7 +220,7 @@ article ul {
     text-align: left;
 }
 .guests {
-    border: 1px solid $color-primary;
+    border: 1px solid #ccc;
     padding: 5px;
 }
 .guests figure {
@@ -195,21 +272,24 @@ footer p {
     padding: 5px;
 }
 
-.carousel {
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-.carousel img {
-    margin: 0 auto;
-}
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-    border: 3px solid black;
-    color: $color-secondary !important;
-    background-color: black;
-}
 
 @media (max-width: 770px) {
+    section.vision .header img {
+        width: 200px;
+        height: auto;
+    }
+    section.vision h2,
+    section.vision .h2 {
+        font-size: 0.9rem;
+    }
+    section.vision h3,
+    section.vision .h3 {
+        font-size: 0.8rem;
+        color: $color-primary;
+        text-align: center;
+    }
+
     #hamburger {
         display: inline-block !important;
         height: 40px; 

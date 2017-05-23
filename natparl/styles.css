@@ -11,12 +11,12 @@ body {
 h1 {
   font-size: 1.5em;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 20px;
   padding: 5px;
   border-bottom: 1px solid #ccc;
   text-align: center;
   text-transform: uppercase;
-  color: #666666; }
+  color: #f93; }
 
 h3 {
   font-size: 1.2em; }
@@ -94,9 +94,58 @@ section {
   position: relative;
   margin: 5px auto; }
 
-section > span {
+section .container > span {
   position: absolute;
   top: -50px; }
+
+/* Section - SLIDER */
+section.slider {
+  padding: 10px; }
+
+section.slider .container {
+  background: #fff; }
+
+section.slider .carousel {
+  margin: 0 auto; }
+
+section.slider .carousel img {
+  margin: 0 auto; }
+
+section.slider .carousel-control-next-icon, .carousel-control-prev-icon {
+  border: 3px solid black;
+  color: #f93 !important;
+  background-color: black; }
+
+section.slider .carousel-indicators {
+  z-index: 1; }
+
+/* Section - VISION */
+section.vision {
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #fff, #fff 5px, #ccc 5px, #ccc 10px); }
+
+section.vision .container {
+  padding-top: 30px;
+  background-color: transparent; }
+
+section.vision .header {
+  text-align: center; }
+
+section.vision h2,
+section.vision .h2 {
+  font-size: 1.2rem; }
+
+section.vision h3,
+section.vision .h3 {
+  color: #666666;
+  text-align: center; }
+
+section.vision .status {
+  border: 0;
+  background: transparent;
+  padding: 7px;
+  color: #138808;
+  transition: all 1s ease-in-out; }
 
 article {
   padding: 10px; }
@@ -106,7 +155,7 @@ article ul {
   text-align: left; }
 
 .guests {
-  border: 1px solid #666666;
+  border: 1px solid #ccc;
   padding: 5px; }
 
 .guests figure {
@@ -152,19 +201,21 @@ footer p {
   background: transparent;
   padding: 5px; }
 
-.carousel {
-  margin: 0 auto;
-  margin-bottom: 20px; }
-
-.carousel img {
-  margin: 0 auto; }
-
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  border: 3px solid black;
-  color: #f93 !important;
-  background-color: black; }
-
 @media (max-width: 770px) {
+  section.vision .header img {
+    width: 200px;
+    height: auto; }
+
+  section.vision h2,
+  section.vision .h2 {
+    font-size: 0.9rem; }
+
+  section.vision h3,
+  section.vision .h3 {
+    font-size: 0.8rem;
+    color: #666666;
+    text-align: center; }
+
   #hamburger {
     display: inline-block !important;
     height: 40px;
