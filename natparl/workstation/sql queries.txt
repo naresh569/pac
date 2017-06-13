@@ -1,0 +1,14 @@
+INSERT INTO `pac_natparl`.`reg` (`name`, `email`, `phno`, `reason`) 
+VALUES ('"
+  . $name   . "', '"
+  . $email  . "', '"
+  . $mobile . "', '"
+  . $reason . "')
+ON DUPLICATE KEY UPDATE
+name='" . $name . "', reason='" . $reason . "'
+
+
+INSERT INTO `pac_natparl`.`reg` (`name`, `email`, `phno`, `reason`) 
+VALUES ('Naresh', 'naresh569@gmail.com', '8008811510', 'Welcome')
+ON DUPLICATE KEY UPDATE
+name='Saravana', reason='Welcome to the World'

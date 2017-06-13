@@ -6,47 +6,57 @@ $size: 13px;
 body {
     padding: 0;
     margin: 0;
-    position: relative;
+    // position: relative;
     font-size: 0.9rem !important;
+    // background-color: blue;
 }
 /* Common Styles */
 .container {
-    // border: 1px solid #337ab7;
     position: relative;
 
 }
 
 h1 {
-    // text-transform: uppercase;
-    // text-align: center;
     font-size: 1.5em;
-    // border: 1px solid #000;
     margin: 0;
     margin-top: 20px;
-    // font-size: 16px;
     padding: 5px;
-    border-bottom: 1px solid #ccc;
-    // border: 1px solid $color-secondary;
     text-align: center;
     text-transform: uppercase;
     color: $color-secondary;
+    font-size: 32px;
+    color: #262626;
+    font-weight: bolder;
 }
 h3 {
     font-size: 1.2em;
 }
 
+main hr {
+    border-bottom: 3px solid $color-secondary;
+    width: 60px;
+    margin: 2px auto;
+    transition: width 500ms ease-in-out;
+}
+
 /* Styles for Nav */
 nav {
-    border: 1px solid transparent;
-    border-bottom-color: #ccc;
-    background-color: #fff;
-    // height: 52px;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    margin-bottom: 5px;
     position: fixed;
-    z-index: 2;
+    top: 0;
+    z-index: 1000000;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    // display: none;
+    // border: 1px solid #0f0;
 }
-nav .container {}
+nav .container {
+    // border: 1px solid transparent;
+    // background-color: #0f0;
+    // border: 1px solid #000;
+}
 nav .container > * {
     display: inline-block;
     // background-color: blue;
@@ -61,9 +71,6 @@ nav .title {
     line-height: 13px;
     color: $color-secondary
 }
-// nav .list {
-//     float: right;
-// }
 
 nav .hamburger {
     color: $color-primary;
@@ -72,6 +79,14 @@ nav .hamburger {
     padding: 6px 5px 5px;
     margin: auto;
     display: none;
+}
+nav .hamburger img {
+    margin-top: -3px;
+    border: 0;
+}
+
+nav .hamburger button:focus {
+    outline: 0;
 }
 
 nav .menu {
@@ -83,13 +98,7 @@ nav .menu li {
     text-align: center;
 }
 nav .hamburger {
-    // padding: 1px;
-    // font-size: $size + 5;
-    
-
 }
-/*
-*/
 nav ul {
     margin: 0;
     list-style-type: none;
@@ -116,28 +125,32 @@ nav ul > li:hover {
     border: 3px solid $color-secondary;
 }
 
-// main, footer {
-//     display: none;
-// }
-
-/* Styles for main */
+/* Styles for MAIN */
 main {
-    padding-top: 45px;
+    padding: 0;
+    padding-top: 41px;
+    // display: none;
+    margin: 0;
 }
 section {
     position: relative;
     // border: 1px solid #000;
-    margin: 5px auto;
+    margin: 0 auto;
+}
+section:hover hr {
+    width: 100px;
 }
 section .container > span {
     position: absolute;
-    top: -50px;
+    top: -60px;
 }
 
 /* Section - SLIDER */
 section.slider {
     // border: 1px solid #000;
-    padding: 10px;
+    // padding: 10px;
+    // display: none;
+    // background-color: #f93;
 }
 section.slider .container {
     background: #fff;
@@ -161,13 +174,14 @@ section.slider .carousel-indicators {
 
 /* Section - VISION */
 section.vision {
+    margin: 10px 0;
     text-align: center;
     background: repeating-linear-gradient(
         45deg,
         #fff,
         #fff 5px,
-        #ccc 5px,
-        #ccc 10px
+        #ddd 5px,
+        #ddd 10px
     );
     // transition: all 1s ease-in-out;
     
@@ -194,10 +208,11 @@ section.vision .header {
 section.vision h2,
 section.vision .h2 {
     font-size: 1.2rem;
+    color: $color-primary;
 }
 section.vision h3,
 section.vision .h3 {
-    color: $color-primary;
+    color: #000;
     text-align: center;
 }
 section.vision .status {
@@ -206,6 +221,116 @@ section.vision .status {
     padding: 7px;
     color: $color-green;
     transition: all 1s ease-in-out;
+}
+
+section.participants .list {
+}
+section.participants .list .menu {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+section.participants .list .menu > li {
+    padding: 2px;
+}
+section.participants .list .menu h3 {
+    border: 3px solid $color-secondary;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    color: $color-secondary;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+section.participants .list .menu h3:hover,
+section.participants .list .menu h3:focus {
+    background-color: $color-secondary;
+    color: #fff;
+}
+section.participants .list div {
+    opacity: 0;
+    height: 0;
+    border: 3px solid $color-secondary;
+    border-top: 0;
+    padding: 5px;
+    transition: all 1s ease-in-out;
+}
+section.participants .list div > ul {
+    margin: 0;
+    padding-left: 30px;
+}
+
+section.participants .list .show {
+    opacity: 1;
+    height: 550px;
+    border: 3px solid $color-secondary;
+    border-top: 0;
+    
+}
+
+section.participants .list .hide {
+    opacity: 0;
+    height: 0;
+    border: 3px solid $color-secondary;
+    border-top: 0;
+    // padding: 0;
+}
+
+
+section.register .form {
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 500px;
+}
+section.register .field {
+    margin: 0 auto;
+    padding: 2px;
+}
+section.register .field > * {
+    display: block;
+}
+section.register label {
+    margin: 0 auto;
+    margin-top: 5px;
+    // text-align: right;
+    text-transform: uppercase;
+}
+section.register input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid $color-secondary;
+}
+section.register input:active,
+section.register input:focus {
+    outline: 0;
+}
+section.register input[type=submit] {
+    padding: 10px;
+    background-color: $color-secondary;
+    color: #fff;
+    // transition: background-color 500ms ease-in
+}
+
+
+// section.participants .list .content > ul.show {
+//     border: 1px solid #0f0;
+//     opacity: 1;
+// }
+// section.participants .list .content > ul.hide {
+//     border: 1px solid transparent;
+//     opacity: 0;
+// }
+section.knowledge-partner ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section.knowledge-partner img {
+    display: block;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+
 }
 
 article {
@@ -220,27 +345,37 @@ article ul {
     text-align: left;
 }
 .guests {
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     padding: 5px;
 }
 .guests figure {
-    width: 250px;
+    // display: none;
+    width: 200px;
     height: auto;
     padding: 5px;
     // border: 1px solid $color-primary;
     margin: 5px auto;
 }
+.item {
+    // border: 1px solid #000;
+    padding: 0;
+}
 .guests figure img {
     width: 100%;
-    border: 1px solid #000;
 }
 .guests figcaption {
-    padding-top: 3px;
+    padding-top: 10px;
+    // border: 1px solid #000;
+}
+section.participants h3 {
+    text-align: center;
+    color: $color-secondary;
+    font-size: 1.75rem;
 }
 .guests .h4,
 .guests h4 {
     // border: 1px solid #000;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     text-align: center;
     margin: 0;
 }
@@ -272,6 +407,16 @@ footer p {
     padding: 5px;
 }
 
+.quicklook {
+    border: 1px solid #000;
+}
+.quicklook .container {
+    margin: 10px auto;
+    border: 1px solid #0f0;
+}
+.required {
+    color: red;
+}
 
 
 @media (max-width: 770px) {
@@ -286,8 +431,10 @@ footer p {
     section.vision h3,
     section.vision .h3 {
         font-size: 0.8rem;
-        color: $color-primary;
         text-align: center;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
     }
 
     #hamburger {
@@ -316,7 +463,7 @@ footer p {
     }
     #menu.menu-open {
         opacity: 1;
-        height: 200px;
+        height: 230px;
     }
     #menu.menu-close {
         height: 0;

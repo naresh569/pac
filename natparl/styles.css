@@ -1,7 +1,6 @@
 body {
   padding: 0;
   margin: 0;
-  position: relative;
   font-size: 0.9rem !important; }
 
 /* Common Styles */
@@ -13,23 +12,32 @@ h1 {
   margin: 0;
   margin-top: 20px;
   padding: 5px;
-  border-bottom: 1px solid #ccc;
   text-align: center;
   text-transform: uppercase;
-  color: #f93; }
+  color: #f93;
+  font-size: 32px;
+  color: #262626;
+  font-weight: bolder; }
 
 h3 {
   font-size: 1.2em; }
 
+main hr {
+  border-bottom: 3px solid #f93;
+  width: 60px;
+  margin: 2px auto;
+  transition: width 500ms ease-in-out; }
+
 /* Styles for Nav */
 nav {
-  border: 1px solid transparent;
-  border-bottom-color: #ccc;
-  background-color: #fff;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  margin-bottom: 5px;
   position: fixed;
-  z-index: 2; }
+  top: 0;
+  z-index: 1000000;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc; }
 
 nav .container > * {
   display: inline-block;
@@ -52,6 +60,13 @@ nav .hamburger {
   margin: auto;
   display: none; }
 
+nav .hamburger img {
+  margin-top: -3px;
+  border: 0; }
+
+nav .hamburger button:focus {
+  outline: 0; }
+
 nav .menu {
   text-align: right;
   float: right; }
@@ -59,8 +74,6 @@ nav .menu {
 nav .menu li {
   text-align: center; }
 
-/*
-*/
 nav ul {
   margin: 0;
   list-style-type: none;
@@ -86,22 +99,24 @@ nav ul > li:hover {
   color: #f93;
   border: 3px solid #f93; }
 
-/* Styles for main */
+/* Styles for MAIN */
 main {
-  padding-top: 45px; }
+  padding: 0;
+  padding-top: 41px;
+  margin: 0; }
 
 section {
   position: relative;
-  margin: 5px auto; }
+  margin: 0 auto; }
+
+section:hover hr {
+  width: 100px; }
 
 section .container > span {
   position: absolute;
-  top: -50px; }
+  top: -60px; }
 
 /* Section - SLIDER */
-section.slider {
-  padding: 10px; }
-
 section.slider .container {
   background: #fff; }
 
@@ -121,8 +136,9 @@ section.slider .carousel-indicators {
 
 /* Section - VISION */
 section.vision {
+  margin: 10px 0;
   text-align: center;
-  background: repeating-linear-gradient(45deg, #fff, #fff 5px, #ccc 5px, #ccc 10px); }
+  background: repeating-linear-gradient(45deg, #fff, #fff 5px, #ddd 5px, #ddd 10px); }
 
 section.vision .container {
   padding-top: 30px;
@@ -133,11 +149,12 @@ section.vision .header {
 
 section.vision h2,
 section.vision .h2 {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  color: #666666; }
 
 section.vision h3,
 section.vision .h3 {
-  color: #666666;
+  color: #000;
   text-align: center; }
 
 section.vision .status {
@@ -147,6 +164,93 @@ section.vision .status {
   color: #138808;
   transition: all 1s ease-in-out; }
 
+section.participants .list .menu {
+  margin: 0;
+  list-style-type: none;
+  padding: 0; }
+
+section.participants .list .menu > li {
+  padding: 2px; }
+
+section.participants .list .menu h3 {
+  border: 3px solid #f93;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  color: #f93;
+  transition: all 1s ease-in-out;
+  cursor: pointer; }
+
+section.participants .list .menu h3:hover,
+section.participants .list .menu h3:focus {
+  background-color: #f93;
+  color: #fff; }
+
+section.participants .list div {
+  opacity: 0;
+  height: 0;
+  border: 3px solid #f93;
+  border-top: 0;
+  padding: 5px;
+  transition: all 1s ease-in-out; }
+
+section.participants .list div > ul {
+  margin: 0;
+  padding-left: 30px; }
+
+section.participants .list .show {
+  opacity: 1;
+  height: 550px;
+  border: 3px solid #f93;
+  border-top: 0; }
+
+section.participants .list .hide {
+  opacity: 0;
+  height: 0;
+  border: 3px solid #f93;
+  border-top: 0; }
+
+section.register .form {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 500px; }
+
+section.register .field {
+  margin: 0 auto;
+  padding: 2px; }
+
+section.register .field > * {
+  display: block; }
+
+section.register label {
+  margin: 0 auto;
+  margin-top: 5px;
+  text-transform: uppercase; }
+
+section.register input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #f93; }
+
+section.register input:active,
+section.register input:focus {
+  outline: 0; }
+
+section.register input[type=submit] {
+  padding: 10px;
+  background-color: #f93;
+  color: #fff; }
+
+section.knowledge-partner ul {
+  list-style-type: none;
+  padding: 0; }
+
+section.knowledge-partner img {
+  display: block;
+  width: 400px;
+  height: auto;
+  margin: 0 auto; }
+
 article {
   padding: 10px; }
 
@@ -155,25 +259,31 @@ article ul {
   text-align: left; }
 
 .guests {
-  border: 1px solid #ccc;
   padding: 5px; }
 
 .guests figure {
-  width: 250px;
+  width: 200px;
   height: auto;
   padding: 5px;
   margin: 5px auto; }
 
+.item {
+  padding: 0; }
+
 .guests figure img {
-  width: 100%;
-  border: 1px solid #000; }
+  width: 100%; }
 
 .guests figcaption {
-  padding-top: 3px; }
+  padding-top: 10px; }
+
+section.participants h3 {
+  text-align: center;
+  color: #f93;
+  font-size: 1.75rem; }
 
 .guests .h4,
 .guests h4 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: center;
   margin: 0; }
 
@@ -201,6 +311,16 @@ footer p {
   background: transparent;
   padding: 5px; }
 
+.quicklook {
+  border: 1px solid #000; }
+
+.quicklook .container {
+  margin: 10px auto;
+  border: 1px solid #0f0; }
+
+.required {
+  color: red; }
+
 @media (max-width: 770px) {
   section.vision .header img {
     width: 200px;
@@ -213,8 +333,10 @@ footer p {
   section.vision h3,
   section.vision .h3 {
     font-size: 0.8rem;
-    color: #666666;
-    text-align: center; }
+    text-align: center;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px; }
 
   #hamburger {
     display: inline-block !important;
@@ -238,7 +360,7 @@ footer p {
 
   #menu.menu-open {
     opacity: 1;
-    height: 200px; }
+    height: 230px; }
 
   #menu.menu-close {
     height: 0;
